@@ -6,17 +6,12 @@
 {% endblock %}
 
 {% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/post.css'%}">
     <link rel="stylesheet" href="{% static 'blog/index.css'%}">
 {% endblock  %}
 
 {% block content %}
-    <header id='main-navigation'>
-         <h1><a href="">Issa' Blog</a></h1>
-          <nav>
-            <a href=""> All Posts</a>
-          </nav>
-    </header>
-
+    
     <section id='welcome'>
         <header>
             <img src="" alt="Issa The Author of This Blog">
@@ -30,17 +25,7 @@
         <h2>My Latest Thoughts</h2>
 
         <ul>
-            <li> 
-                <article class='post'>
-                    <a href="">
-                        <img src="" alt="Mountain Hiking">
-                        <div class='post__content'>
-                            <h3>Mountin Hiking</h3>
-                            <p>There's nothing like the views you get when hiking the mountains!</p>
-                        </div>
-                    </a>
-                </article>
-            </li>
+            {% include 'blog/includes/post.html' %}
         </ul>
     </section>
 
